@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Probando jquery</title>
+
+<script src= "Jquery/jquery-1.6.3.min.js"></script>
+
+<style>
+
+    #mensajes{
+
+        float:center;
+        margin-left: 40%;
+    }   
+
+    p {
+
+        background-color:indigo;
+        color:lawngreen;
+        width: 30%;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 35%;
+        
+    }
+
+</style>
+
+
+<script>
+
+    function modoNoche(){
+
+        $(document).ready(function(){
+
+            var p= $("#mensajes p");
+            var c= $("body");
+            var k=$("p");
+            p.css("background-color", "yellow");
+            c.css("background-color", "black");
+            k.css("color", "blue");
+        });
+    }
+
+</script>
+
+  
+</head>
+
+<body>
+
+
+    <div id="mensajes" onclick="modoNoche()">
+
+        <p>Hola que disen</p>
+        <p>los chavaliki</p>
+        <p>del barrio</p>
+
+    </div>
+
+</body>
+</html>
