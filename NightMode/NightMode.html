@@ -11,7 +11,7 @@ I will be using jQuery library to practise how to use it
 <title>Jquery testing 1</title>
 
 <script src= "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.js"></script>
-
+<!--Cogerr todo el estilo y hacerlo una funcion ModoDia (igual que modo noche, y lo metemos en el else del script mas abajo) -->
 <style>
 
     #mensajes{
@@ -43,27 +43,54 @@ I will be using jQuery library to practise how to use it
             var p= $("#mensajes p");
             var c= $("body");
             var k=$("p");
+            var q=$("input");
             p.css("background-color", "yellow");
             c.css("background-color", "black");
             k.css("color", "blue");
+            q.css("color", "blue");
         });
     }
 
 </script>
+
 
   
 </head>
 
 <body>
 
+    <form id="checkk">
+        <input type  ="checkbox" id="check1" name="check1" />Night Mode
+    </form>
 
-    <div id="mensajes" onclick="modoNoche()">
+        <script>
+
+                    $('#checkk :checkbox').change(function() {
+    // this will contain a reference to the checkbox   
+    if (this.checked) {
+        modoNoche(); 
+    } else {
+        // the checkbox is now no longer checked
+        alert("damnnn");
+    }
+});   
+
+
+   
+
+
+        </script>
+
+
+    <div id="mensajes">
 
         <p>Hello world</p>
         <p>this is</p>
         <p>JavaScript</p>
 
     </div>
+
+    <script></script>
 
 </body>
 </html>
